@@ -1,0 +1,408 @@
+@charset "UTF-8";
+
+/*
+/*colors
+ cream #FFF8e9 (255, 248, 233)
+ blue #394F5E  (57, 79, 94)
+ dark orange #B94531 (185, 69, 49)
+*/
+
+
+/* general style*/
+
+html {
+    box-sizing: border-box;
+  }
+
+* {
+    box-sizing: border-box;
+  }
+  
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #394F5E;
+    background-color: rgba(57, 79, 94, .25);
+    max-width: 1200px;
+}
+
+h1 {
+    font: bold 2.2em Times, serif;
+    color: #394F5E;
+    text-shadow: .05em .05em .1em gray
+}
+
+h2 {
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    color: #B94531;
+    letter-spacing: .4em;
+}
+
+h3 {
+    font: bold 1em sans-serif;
+    text-transform: uppercase;
+    color: #394F5E;
+    letter-spacing: .1em;
+}
+
+dt {
+    font-weight: bold;
+    color: #394F5E;
+}
+
+strong {
+    font-style: italic;
+}
+
+#healthy, #drinks {
+    background-color: #B94531;
+    border: 2px solid black;
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+/*-----BUTTON----*/
+  
+.button {
+    background-color: rgb(57, 79, 94);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*-----IMAGES----*/
+
+img {
+    max-width: 100%;
+  }
+
+
+/*---------------NAV STYLE--------------*/
+ /* styles main-nav, list-style none - removes bullets
+  2 remove margin on main_nav and padding on li*/
+
+.main_nav {
+    display:flex;
+    align-items: center;
+    list-style:none;
+    background: rgb(57, 79, 94);
+    padding: .3em;
+    margin: 0;
+}
+
+/*style nav links*/
+.main_nav a{
+        color: white;
+        padding: 60px 40px;
+        text-decoration: none;
+}
+
+/*hover style*/
+.main_nav a:hover {
+    background-color: white;
+    color: rgb(57, 79, 94);
+}
+
+/*add logo - push to LEFT*/
+li.logo {
+    margin-right: auto;
+}
+
+/*top push logo to RIGHT side, use CSS below and 
+also update the html so the logo is at the END of the list
+
+li.logo {
+    margin-right: auto;
+}
+
+
+/*-----HERO IMAGE/HEADER-----*/
+.hero_image{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(images/coffee_beans.jpg);
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+.hero_header {
+    text-align: left;
+    position: absolute;
+    color: white;
+    top:40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 3em;
+    margin: 20px;
+}
+
+
+/*-----INDEX PAGE GRID-----*/
+
+#index_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+        'welcome    welcome     welcome'
+        'shop       shop        shop'
+        'fact1      fact2       fact3'
+        'about      about       about'
+        'product1   product2    product3'
+        'review     review      review';
+    justify-items: center;
+    background-color: white;
+    margin: 0 auto;
+}
+
+/*name each grid item to use in grid-template-areas*/
+/*these are ready, just need to add review*/
+
+#review {
+    grid-area: review;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product3 {
+    grid-area: product3;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product2 {
+    grid-area: product2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product1 {
+    grid-area: product1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#about {
+    grid-area: about;
+    object-fit: cover;
+}
+
+#fact3 {
+    grid-area: fact3;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact2 {
+    grid-area: fact2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact1 {
+    grid-area: fact1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#shop {
+    grid-area: shop;
+    object-fit: cover;
+}
+
+#welcome {
+    grid-area: welcome;
+    object-fit: cover;
+}
+
+
+/*--container - spacing and style--*/
+
+#welcome {
+    margin: 0px 300px 0px 300px;
+    padding: 60px 0px 60px 0px;
+}
+
+#fact1, #fact2, #fact3 {
+    margin: 20px;
+}
+
+#product1, #product2, #product3 {
+    margin: 40px;
+}
+
+#shop {
+    padding: 0px 0px 80px 0px;
+}
+
+#about {
+    margin: 80px;
+}
+
+.header {
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    color: #B94531;
+    letter-spacing: .4em;
+}
+
+
+
+
+
+/*--footer--*/
+
+footer {
+    background-color: rgb(57, 79, 94);
+    color: rgb(255, 248, 233);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/*-----MEDIA QUERIES----------*/
+
+@media screen and (max-width: 1000px) {
+    #welcome {
+        margin:0px 200px 0px 200px;
+      }
+}
+
+@media screen and (max-width: 800px) {
+    #index_grid {
+        display:grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: 
+            'welcome    welcome'
+            'shop       shop'
+            'fact1      fact2' 
+            'fact3      fact3' 
+            'about      about'
+            'product1   product2' 
+            'product3   product3'  
+            'review     review'
+;
+        justify-items: center;
+        background-color: white;
+    }
+    
+    .main_nav a{
+        padding: 60px 20px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    /*increase margins for about*/
+   
+    #welcome {
+        margin:0px 125px 0px 125px;
+}
+}
+  
+
+@media screen and (max-width: 600px) {
+    #index_grid {
+        display:grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas: 
+            'welcome'
+            'shop'
+            'fact1' 
+            'fact2' 
+            'fact3' 
+            'about'
+            'product1' 
+            'product2'
+            'product3'
+            'review';
+        justify-items: center;       
+        background-color: white;
+    }
+
+
+    body {
+        font-size: 16px;
+    }
+
+    .main_nav {
+        padding: .3em;
+        font-size: 13px;
+    }
+    
+    .main_nav a{
+        padding: 60px 20px;
+    }
+   
+    #welcome {
+        margin:0px 40px 0px 40px;
+}
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----MENU STYLE----------*/
+.price {
+    font-weight: bold;
+    font-style: italic;
+} 
+
+#drinks {
+    border: 2px solid;
+    background-color: rgba(57, 79, 94, .25);
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+#treats {
+    border: 2px solid;
+    background-color: rgba(57, 79, 94, .25);
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+#healthy {
+    border: 2px solid;
+    background-color: rgba(57, 79, 94, .25);
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+
+
